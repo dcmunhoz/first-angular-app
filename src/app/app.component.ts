@@ -7,18 +7,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public title: string = 'Olá mundo !';  
-  public transferencia: any = {};
-  public mensagemErro: string = "";
+  public transferenciasAppComponent: any[] = [];
+  public mensagemErroAppComponent: string = "";
   
   transferir($event: any)
   {
-    this.transferencia = { ...$event };
+
+    let transferencia = { ...$event, data: new Date() };
+    this.transferenciasAppComponent.push(transferencia);
     console.log($event);
-    console.log(this.transferencia);
+    console.log(this.transferenciasAppComponent);
   }
 
   validarErro($event: string){
-    this.mensagemErro = $event;
+    this.mensagemErroAppComponent = $event;
   }
 
 }

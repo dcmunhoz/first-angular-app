@@ -3,10 +3,7 @@
     (aoValidarErro)="validarErro($event)"
 ></app-nova-transferencia>
 
-<p>Valor: {{transferencia.valor}} </p>
-<p>Destino: {{transferencia.destino}} </p>
-
-<br />
-<br />
-
-<p> {{mensagemErro}} </p>
+<app-extrato 
+    [transferenciasInput]="transferenciasAppComponent" 
+    [mensagemErroInput]="mensagemErroAppComponent"
+></app-extrato>
