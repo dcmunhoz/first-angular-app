@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'first-angular-app';
+  public title: string = 'Olá mundo !';  
+  public transferencia: any = {};
+  public mensagemErro: string = "";
+  
+  transferir($event: any)
+  {
+    this.transferencia = { ...$event };
+    console.log($event);
+    console.log(this.transferencia);
+  }
+
+  validarErro($event: string){
+    this.mensagemErro = $event;
+  }
+
 }
