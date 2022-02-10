@@ -3,7 +3,11 @@
     (aoValidarErro)="validarErro($event)"
 ></app-nova-transferencia>
 
-<app-extrato 
-    [transferenciasInput]="transferenciasAppComponent" 
-    [mensagemErroInput]="mensagemErroAppComponent"
-></app-extrato>
+<app-extrato ></app-extrato>
+
+<div 
+    *ngIf="mensagemErroAppComponent" 
+    class="error-message"
+>
+    <p > {{ mensagemErroAppComponent }} </p>
+</div>
