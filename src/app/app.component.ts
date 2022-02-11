@@ -16,13 +16,6 @@ export class AppComponent {
   constructor(service: TransferenciaService) {
     this._service = service;
   }
-  
-  transferir($event: any)
-  {
-    this._service.adicionar($event);
-    console.log($event);
-    console.log(this.transferenciasAppComponent);
-  }
 
   validarErro($event: string){
     this.mensagemErroAppComponent = $event;
