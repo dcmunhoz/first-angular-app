@@ -1,4 +1,12 @@
-<app-nova-transferencia 
+<header>
+    <a routerLink="extrato">Extrato</a>
+    <a routerLink="nova-transferencia" routerLinkActive="ativo">Nova Transferencia</a>
+</header>
+<main>
+    <router-outlet></router-outlet>
+</main>
+
+<!-- <app-nova-transferencia 
     (aoValidarErro)="validarErro($event)"
 ></app-nova-transferencia>
 
@@ -9,4 +17,4 @@
     class="error-message"
 >
     <p > {{ mensagemErroAppComponent }} </p>
-</div>
+</div> -->
